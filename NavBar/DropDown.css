@@ -1,0 +1,47 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #222;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    margin-right: 50px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a, .drop-btn{
+    color: white;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;  
+}
+
+.dropdown-menu{
+
+    /* The menu is hidden */
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 120px;
+}
+
+.dropdown-menu a{
+    display: block;
+    color: white;
+    padding: 12px;
+}
+
+.dropdown:hover .dropdown-menu{
+
+    /* The hidden menu appears */
+    display: block;
+}

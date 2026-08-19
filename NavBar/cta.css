@@ -1,0 +1,36 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background:black;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: wheat;
+}
+
+.nav-links{
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: wheat;
+}
+
+.nav-links a:hover{
+    color: lightblue;
+}
+
+.cta{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
