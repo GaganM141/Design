@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar{
+    position: sticky;
+    top:0;
+    height: 70px;
+    padding:0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    z-index: 1000;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+    color: lightblue;
+}
+
