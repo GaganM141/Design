@@ -4,6 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            background: white;
+            padding: 20px;
+        }
+
+        nav{
+            display: flex;
+            gap: 5px;
+        }
+
+        nav a{
+            padding: 8px 20px;
+            text-decoration: none;
+            columns: #333;
+            background: #ddd;
+            border-radius: 8px 8px 0 0;
+            clip-path: polygon(0,0,calc(100%-10px) 0, 100% 100%, 0 100%);
+        }
+
+        nav a:hover, nav a:focus{
+            background: #fff;
+
+        }
+
+        .content{
+            background: #fff;
+            padding: 15px;
+            border-radius: 0 8px 8px 8px;
+        }
+
+        .content div{
+            display: none;
+            /* display: none: Completely hides the element from the page. It removes the element from the document layout entirely, so it takes up zero space. */
+        }
+
+        .content div:target{
+            display: block;
+        }
+
+    
+    </style>
 </head>
 <body>
     <nav>
@@ -11,5 +54,19 @@
         <a href="#lunch">Lunch</a>
         <a href="#dinner">Dinner</a>
     </nav>
+    <div class="content">
+        <div id="breakfast">
+            <h3>Breakfast</h3>
+            <p>Eggs, Toast, Coffee</p>
+        </div>
+        <div id="lunch">
+            <h3>Lunch</h3>
+            <p>Sandwich, Salad, Juice</p>
+        </div>
+        <div id="dinner">
+            <h3>Dinner</h3>
+            <p>Steak, Pasta, Wine</p>
+        </div>
+    </div>
 </body>
 </html>
