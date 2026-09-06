@@ -3,18 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design</title>
+    <title>Web Design Learning</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1e293b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        /* Section Layout */
+        .section-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-card h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+        }
+
+        /* Reset and format the list */
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Target links directly */
+        .link-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Interactive state */
+        .link-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>MY Web Design Learning</h1>
-    <div>
-        <h2>NavBar</h2>
-        <ul>
-            <li><a href="NavBar/horizontal.html">Horizontal navbar</a></li>
-            <li><a href="NavBar/cta.html">CTA navbar</a></li>
-            <li><a href="NavBar/DropDown.html">Drop Down Navbar</a></li>
-            <li><a href="NavBar/sticky.html">Sticky navbar</a></li>
-        </ul>
-    </div>
+
+    <h1>My Web Design Learning</h1>
+
+    <main>
+        <section class="section-card">
+            <h2>NavBar</h2>
+            <ul class="link-list">
+                <li><a href="NavBar/horizontal.html">Horizontal Navbar</a></li>
+                <li><a href="NavBar/cta.html">CTA Navbar</a></li>
+                <li><a href="NavBar/DropDown.html">Dropdown Navbar</a></li>
+                <li><a href="NavBar/sticky.html">Sticky Navbar</a></li>
+                <li><a href="NavBar/folder.html">Folder Navbar</a></li>
+                <li><a href="NavBar/Floating.html">Floating Navbar</a></li>
+            </ul>
+        </section>
+
+        <section class="section-card">
+            <h2>Forms</h2>
+            <ul class="link-list">
+                <li><a href="Forms/singleCol.html">Single-Column Form</a></li>
+            </ul>
+        </section>
+    </main>
+
 </body>
 </html>
