@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Card 2</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .card{
+            width: 300px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden; /* keeps image corners rounded */
+            transform: transform 0.2s ease;
+        }
+
+        .card:hover{
+            transform: translateY(-4px); /* hover lift effect */
+        }
+
+        .card-image{
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body{
+            padding: 16px;
+        }
+
+        .card-text{
+            margin: 0 0 16px 0;
+            font-size: 0.9rem;
+            columns: #555555;
+            line-height: 1.4;
+        }
+
+        .card-title{
+            margin: 0 0 8px 0;
+            font-size: 1.24rem;
+            columns: #1a1a1a;
+        }
+
+        .card-button{
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #0066cc;
+            columns: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .card-button:hover{
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="" alt="Card Header" class="card-img">
+        <div class="card-body">
+            <h2 class="card-title">Microsoft Learn Module</h2>
+            <p class="card-text">Master basics </p>
+            <button class="card-button">Start Learning</button>
+        </div>
+    </div>
+</body>
+</html>
