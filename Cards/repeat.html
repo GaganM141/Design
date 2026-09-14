@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Repeating Cards Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 24px;
+    }
+
+    /* THE PARENT GRID CONTAINER */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* CARD ITEM STYLE */
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #0066cc;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>HTML Basics</h3>
+      <p>Learn structural tags and document setup.</p>
+    </div>
+    <div class="card">
+      <h3>CSS Styling</h3>
+      <p>Learn layout grids, Flexbox, and spacing.</p>
+    </div>
+    <div class="card">
+      <h3>JavaScript Basics</h3>
+      <p>Learn functions, arrays, and DOM manipulation.</p>
+    </div>
+    <div class="card">
+      <h3>Cloud Fundamentals</h3>
+      <p>Learn cloud services and deployment basics.</p>
+    </div>
+  </div>
+
+</body>
+</html>
