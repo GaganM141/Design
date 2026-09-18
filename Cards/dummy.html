@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Cards from JSON</title>
+</head>
+<body>
+    <h1>Course Catalog</h1>
+
+    <div id="cardGrid" class="card-grid"></div>
+    <script>
+        const jsonData = [
+         { id: 1, title: "HTML Fundamentals", category: "Frontend", description: "Learn structure, semantics, forms, and core elements." },
+         { id: 2, title: "CSS Layouts & Flexbox", category: "Frontend", description: "Master box model, positioning, Flexbox, and responsive design." },
+         { id: 3, title: "CSS Grid Architecture", category: "Frontend", description: "Build complex two-dimensional layout grids effortlessly." },
+         { id: 4, title: "JavaScript Basics", category: "JavaScript", description: "Understand variables, data types, logic, and loops." },
+         { id: 5, title: "DOM Manipulation", category: "JavaScript", description: "Dynamically select, modify, and render web page elements." },
+         { id: 6, title: "Asynchronous JS & Fetch API", category: "JavaScript", description: "Work with Promises, Async/Await, and REST API calls." },
+         { id: 7, title: "Git & GitHub Basics", category: "DevOps", description: "Version control workflows, branching, commits, and pull requests." },
+         { id: 8, title: "Linux CLI Essentials", category: "Cloud & OS", description: "Master shell navigation, file management, and terminal tools." },
+         { id: 9, title: "Cloud Computing Intro", category: "Cloud", description: "Core cloud concepts, service models (IaaS, PaaS, SaaS), and architecture." },
+         { id: 10, title: "Microsoft Azure Core", category: "Cloud", description: "Resource management, virtual machines, and cloud storage basics." },
+         { id: 11, title: "Web Accessibility (a11y)", category: "Design", description: "Build inclusive applications using ARIA roles and contrast standards." },
+         { id: 12, title: "UI Components & Design Systems", category: "Design", description: "Design reusable components like cards, modals, and navigation bars." }
+        ];
+
+        function renderCards(data){
+            const container=document.getElementById('cardGrid');
+
+            // clear existing content
+            container.innerHTML='';
+
+            // loop through each item in the JSON array
+            data.forEach(item=>{
+                // create HTML string for each card.
+                const cardHTML=`
+                <div class='card'>
+                    <div>
+                        <div class = 'card-header'>
+                            <span class='card-category'>${item.category}</span>
+                            <span class='card-id'>#${item.id}</span>
+                        </div>
+                        <h3 class='card-title'>${item.title}</h3>
+                        <p class='card-description'>${item.description}</p>
+                    </div>
+                    <button class='card-button' onclick="alert('selected: ${item.title}')">Start Module</button>
+                </div>
+                `;
+                // appending generated card to gride
+                container.innerHTML+=cardHTML;
+            });
+
+        }
+
+        // ecxecute render on page load
+        renderCards(jsonData);
+    </script>
+</body>
+</html>
